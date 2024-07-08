@@ -11,7 +11,7 @@ const mainGrid = {
 
 function Maingrid () {
 
-const numberOfDays = 31;
+const numberOfDays = 35;
 
     return (
         <div style={mainGrid}>

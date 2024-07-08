@@ -1,3 +1,6 @@
+import moment from 'moment';
+console.log(moment)
+
 //CSS
 const monthCss = {
   display: 'flex',
@@ -6,16 +9,13 @@ const monthCss = {
   alignItems: 'center',
 };
 
-//Obj
-const monthName = {
-  monthName: 'July 2024',
-}
-
 //Main Func
 const Month = () => {
+  const today = moment();
+  const monthName = today.format('MMMM');
   return (
     <div style={monthCss}>
-      {monthName.monthName}
+      {monthName}
     </div>
   );
 };
