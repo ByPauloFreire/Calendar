@@ -1,5 +1,6 @@
 import Header from './Header';
 import Daygrid from './Daygrid';
+import Weekgrid from './Weekgrid';
 
 const mainGrid = {
     width: '75vw',
@@ -15,6 +16,7 @@ const numberOfDays = 31;
     return (
         <div style={mainGrid}>
             <Header/>
+            <Weekgrid/>
             <Daygrid numberOfDays={numberOfDays} />
         </div>
     );
