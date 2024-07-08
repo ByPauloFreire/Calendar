@@ -1,0 +1,27 @@
+.calendar {
+    display: grid;
+    grid-template-columns: 1fr; /* Adjust for multiple columns if needed */
+    margin: 0 auto; /* Center the calendar horizontally */
+    max-width: 800px; /* Optional: Set a maximum width */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional styles for calendar header and month view */
+  .rbc-header,
+  .rbc-month-view {
+    background-color: #f5f5f5;
+  }
+  
+  /* Optional styles for event titles (adjust as needed) */
+  .rbc-event-content {
+    font-weight: bold;
+  }
+  
+  /* Optional styles for selected date (adjust as needed) */
+  .rbc-selected-day {
+    background-color: #e0e0e0;
+  }
+  
