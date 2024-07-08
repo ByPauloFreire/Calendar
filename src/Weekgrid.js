@@ -7,7 +7,8 @@ const weekStyle = {
 
 const dayBox = {
   border: '1px solid black',
-  width: '14.2%'
+  width: '14.2%',
+  textAlign: 'center',
 }
 // CSS END
 
