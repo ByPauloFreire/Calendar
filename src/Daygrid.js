@@ -12,8 +12,8 @@ const daygridCss = {
   gridTemplateColumns: 'repeat(7, auto)',
 };
 
-const Daygrid = ({ numberOfDays }) => {
-  
+const Daygrid = () => {
+  const numberOfDays = 35;
   const daysArray = Array.from({ length: numberOfDays }, (_, index) => <Days key={index} dayKey={index +1} />);
 
   return (

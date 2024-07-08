@@ -9,6 +9,7 @@ const dayBox = {
   border: '1px solid black',
   width: '14.2%',
   textAlign: 'center',
+  fontWeight: 'bold',
 }
 // CSS END
 

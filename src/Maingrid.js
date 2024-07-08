@@ -10,14 +10,11 @@ const mainGrid = {
 };
 
 function Maingrid () {
-
-const numberOfDays = 35;
-
     return (
         <div style={mainGrid}>
             <Header/>
             <Weekgrid/>
-            <Daygrid numberOfDays={numberOfDays} />
+            <Daygrid />
         </div>
     );
 }
