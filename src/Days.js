@@ -1,4 +1,3 @@
-
 const DaysCss = {
     flex: '1 0 20%',
     boxSizing: 'border-box',
@@ -9,10 +8,10 @@ const DaysCss = {
     
   };
   
-  const Days = ({ dayKey }) => {
+  const Days = ({ displayDate }) => {
     return (
       <div style={DaysCss}>
-        {`Day ${dayKey}`}
+        {`Day ${displayDate}`}
       </div>
     );
   };
