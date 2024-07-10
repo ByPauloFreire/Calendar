@@ -6,7 +6,7 @@ const mainGrid = {
     width: '75vw',
     height:'75vh',
     border: '2px solid #000',
-    margin: '10%',
+    margin: '2%',
 };
 
 function Maingrid () {

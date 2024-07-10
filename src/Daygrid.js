@@ -15,21 +15,35 @@ const daygridCss = {
 };
 // CSS END
 
+// Helper function to calculate the starting index
+const getStartIndex = (firstDay) => {
+  const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  return daysOfWeek.indexOf(firstDay);
+};
 
 // COMPONENT START
 const Daygrid = () => {
-  const today = moment();
-  const dayOfMonth = today.date();
-  const lastDay = today.endOf('month').date();
-  const teste = lastDay - dayOfMonth;
-  const numberOfDays = 35;
-  const daysArray = Array.from({ length: numberOfDays }, (_, index) => <Days key={index} displayDate={dayOfMonth + index} />);
+  // Get the first day of the current month using moment
+  const firstDayOfMonth = moment().startOf('month').format('dddd'); // 'dddd' gives the full day name
+  const startIndex = getStartIndex(firstDayOfMonth);
+
+  // Create an array representing days of the month
+  const daysArray = Array.from({ length: 31 }, (v, i) => ({
+    date: (i + 1).toString().padStart(2, '0'),
+    dayName: moment().startOf('month').add(i, 'days').format('dddd')
+  }));
+
+  const days = [];
+  for (let i = 0; i < 35; i++) {
+    const day = <Days key={i} index={i} startIndex={startIndex} dayInfo={daysArray[i]} />;
+    days.push(day);
+  }
 
   return (
     <div style={daygridCss}>
-      {daysArray}
+      {days}
     </div>
   );
 };
-  
+
 export default Daygrid;
