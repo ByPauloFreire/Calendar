@@ -21,6 +21,9 @@ const getStartIndex = (firstDay) => {
   return daysOfWeek.indexOf(firstDay);
 };
 
+// Helper function to calculate how many days there are in the month
+const getHowManyDaysMonth = moment().daysInMonth();
+
 // COMPONENT START
 const Daygrid = () => {
   // Get the first day of the current month using moment
@@ -28,7 +31,7 @@ const Daygrid = () => {
   const startIndex = getStartIndex(firstDayOfMonth);
 
   // Create an array representing days of the month
-  const daysArray = Array.from({ length: 31 }, (v, i) => ({
+  const daysArray = Array.from({ length: getHowManyDaysMonth }, (v, i) => ({
     date: (i + 1).toString().padStart(2, '0'),
     dayName: moment().startOf('month').add(i, 'days').format('dddd')
   }));
