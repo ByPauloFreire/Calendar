@@ -31,14 +31,14 @@ const Daygrid = () => {
   const startIndex = getStartIndex(firstDayOfMonth);
 
   // Create an array representing days of the month
-  const daysArray = Array.from({ length: getHowManyDaysMonth }, (v, i) => ({
-    date: (i + 1).toString().padStart(2, '0'),
+  const daysArray = Array.from({ length: getHowManyDaysMonth + startIndex }, (v, i) => ({
+    date: (i).toString().padStart(2, '0'),
     dayName: moment().startOf('month').add(i, 'days').format('dddd')
   }));
 
   const days = [];
   for (let i = 0; i < 35; i++) {
-    const day = <Days key={i} index={i} startIndex={startIndex} dayInfo={daysArray[i]} />;
+    const day = <Days key={i} index={i + startIndex} startIndex={startIndex} dayInfo={daysArray[i]} />;
     days.push(day);
   }
 
