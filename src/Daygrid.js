@@ -38,7 +38,7 @@ const Daygrid = () => {
 
   const days = [];
   for (let i = 0; i < 35; i++) {
-    const day = <Days key={i} index={i + startIndex} startIndex={startIndex} dayInfo={daysArray[i]} />;
+    const day = <Days key={i} index={i} startIndex={startIndex} dayInfo={daysArray[i]} />;
     days.push(day);
   }
 
