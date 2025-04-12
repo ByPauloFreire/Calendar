@@ -35,6 +35,8 @@ const Days = ({ index, startIndex, dayInfo }) => {
   const hoverColor = isHovered ? 'white' : backgroundColor;
 
   return (
+// Line 45 is testing to see if there is valid info of the day, otherwise it shows as undefined and it doesnt use the background color scheme.
+
     <div
       style={{ ...daysCss, backgroundColor: hoverColor }}
       onMouseEnter={() => setIsHovered(true)}
